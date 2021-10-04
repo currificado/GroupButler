@@ -1442,7 +1442,7 @@ msgid "When someone uses /rules :\n"
 "👥: the bot will answer in the group (always, with admins)\n"
 "👤: the bot will answer in private"
 msgstr "Cuando alguien usa /reglas\n"
-"👥: el bot responderá en el grupo (a los administradores siempre les responderá en el grupo)\n"
+"👥: el bot responderá en el grupo (a los administradores, siempre)\n"
 "👤: el bot responderá en privado"
 
 #: lua/groupbutler/plugins/menu.lua:36
@@ -1450,7 +1450,7 @@ msgid "When someone uses an #extra :\n"
 "👥: the bot will answer in the group (always, with admins)\n"
 "👤: the bot will answer in private"
 msgstr "Cuando alguien usa un #extra\n"
-"👥: el bot responderá en el grupo (a los administradores siempre les responderá en el grupo)\n"
+"👥: el bot responderá en el grupo (a los administradores, siempre)\n"
 "👤: el bot responderá en privado"
 
 #: lua/groupbutler/plugins/menu.lua:39
