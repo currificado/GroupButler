@@ -28,7 +28,7 @@ local function new_pin(self, msg, pin_text)
 		chat_id = msg.from.chat.id,
 		text = text,
 		parse_mode = "Markdown",
-		disable_web_page_preview = true,
+		disable_web_page_preview = false,
 		reply_markup = reply_markup
 	}
 
@@ -54,7 +54,7 @@ local function edit_pin(self, msg, pin_text)
 		message_id = pin_id,
 		text = text,
 		parse_mode = "Markdown",
-		disable_web_page_preview = true,
+		disable_web_page_preview = false,
 		reply_markup = reply_markup
 	}
 	if not ok then
