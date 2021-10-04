@@ -158,10 +158,14 @@ function RedisStorage:getChatMemberProperty(member, property)
 		return self.redis:sismember(set, property) == 1
 	end
 	if property == "status" then
-		if tonumber(self.redis:get("cache:chat:"..member.chat.id..":owner")) == member.user.id then
+		local owner_id = tonumber(self.redis:get("cache:chat:"..member.chat.id..":owner"))
+		--print (owner_id..":"..member.user.id)
+		if owner_id == member.user.id then
+			--print ("OWNER:"..member.user.id)
 			return "creator"
 		end
 		if self.redis:sismember("cache:chat:"..member.chat.id..":admins", member.user.id) == 1 then
+			--print ("ADMIN:"..member.user.id)
 			return "administrator"
 		end
 		return nil

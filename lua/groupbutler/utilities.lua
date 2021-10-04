@@ -317,13 +317,11 @@ function _M:getAdminlist(chat)
 			chat = chat,
 			user = User:new({id=user_id}, p(self)),
 		}, p(self))
-		if admin.status == "administrator" then
-			if count + 1 == #list then
-				s = " └ "
-			end
-			adminlist = adminlist..s..admin.user:getLink().."\n"
-			count = count + 1
+		if count == #list then
+			s = " └ "
 		end
+		adminlist = adminlist..s..admin.user:getLink().."\n"
+		count = count + 1
 		if admin.status == "creator" then
 			creator = admin.user:getLink()
 		end
@@ -334,7 +332,7 @@ function _M:getAdminlist(chat)
 	if creator == "" then
 		creator = "-"
 	end
-	return i18n("<b>👤 Creator</b>\n└ %s\n\n<b>👥 Admins</b> (%d)\n%s"):format(creator, #list - 1, adminlist)
+	return i18n("<b>👤 Creator</b>\n└ %s\n\n<b>👥 Admins</b> (%d)\n%s"):format(creator, #list, adminlist)
 end
 
 function _M:getExtraList(chat_id)
