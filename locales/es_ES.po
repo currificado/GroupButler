@@ -1770,7 +1770,7 @@ msgstr "\n"
 
 #: lua/groupbutler/plugins/report.lua:63
 msgid "Address this report"
-msgstr "Soluciona este reporte"
+msgstr "Solucionar este reporte"
 
 #: lua/groupbutler/plugins/report.lua:108
 #, lua-format
