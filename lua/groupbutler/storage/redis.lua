@@ -143,7 +143,10 @@ function RedisStorage:getChatAdministratorsList(chat)
 	local admins = self.redis:smembers("cache:chat:"..chat.id..":admins") or {}
 	local owner = self.redis:get("cache:chat:"..chat.id..":owner")
 	if owner then
-		table.insert(admins, owner)
+		local owner_is_admin = self.redis:sismember("cache:chat:"..chat.id..":admins", owner)
+		if owner_is_admin==0 then
+			table.insert(admins, owner)
+		end
 	end
 	return admins
 end
