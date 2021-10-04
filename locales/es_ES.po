@@ -1438,7 +1438,7 @@ msgid "If the welcome message is enabled, it will include an inline button that 
 msgstr "Si el mensaje de bienvenida está habilitado, incluirá un botón en línea que le enviará las reglas al usuario en privado."
 
 #: lua/groupbutler/plugins/menu.lua:33
-msgid "When someone uses /rules :\n"
+msgid "When someone uses /rules\n"
 "👥: the bot will answer in the group (always, with admins)\n"
 "👤: the bot will answer in private"
 msgstr "Cuando alguien usa /reglas\n"
@@ -1446,7 +1446,7 @@ msgstr "Cuando alguien usa /reglas\n"
 "👤: el bot responderá en privado"
 
 #: lua/groupbutler/plugins/menu.lua:36
-msgid "When someone uses an #extra :\n"
+msgid "When someone uses an #extra\n"
 "👥: the bot will answer in the group (always, with admins)\n"
 "👤: the bot will answer in private"
 msgstr "Cuando alguien usa un #extra\n"
@@ -1456,6 +1456,10 @@ msgstr "Cuando alguien usa un #extra\n"
 #: lua/groupbutler/plugins/menu.lua:39
 msgid "Select what the bot should do when someone sends a message with arab characters"
 msgstr "Selecciona qué debería hacer el bot cuando alguien envía un mensaje con caracteres árabes."
+
+#: lua/groupbutler/plugins/menu.lua:39
+msgid "When enabled, Telegram service messages such as \"User joined the group\" will be removed"
+msgstr "Cuando está activado, mensajes de servicio de Telegram como \"Fulano se unió al grupo\" serán elimnados."
 
 #: lua/groupbutler/plugins/menu.lua:40
 msgid "Bots will be banned when added by normal users"
@@ -1710,7 +1714,7 @@ msgstr "Reglas al unirse"
 
 #: lua/groupbutler/plugins/private_settings.lua:36
 msgid "Users reports"
-msgstr "Usuarios reportados"
+msgstr "Reportes de usuarios"
 
 #: lua/groupbutler/plugins/private_settings.lua:37
 msgid "Name not available"
