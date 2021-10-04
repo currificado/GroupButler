@@ -20,6 +20,7 @@ local function get_alert_text(self, key)
 	local alert_text = {
 		new_chat_member = i18n("Log every time a user join the group"),
 		ban = i18n("Bans will be logged. I can't log manual bans"),
+		unban = i18n("Unbans will be logged"),
 		kick = i18n("Kicks will be logged. I can't log manual kicks"),
 		warn = i18n("Manual warns will be logged"),
 		mediawarn = i18n("Forbidden media will be logged in the channel"),
