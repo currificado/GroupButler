@@ -101,7 +101,7 @@ function _M:onTextMessage(blocks)
 			if not msg.from:isAdmin() then return end
 			local deleted, not_found, found = {}, {}
 			local hash = 'chat:'..msg.from.chat.id..':extra'
-			for extra in blocks[2]:gmatch('(#[%w_]+)') do
+			for extra in blocks[2]:gmatch('(#[%S_]+)') do
 				found = red:hdel(hash, extra)
 				if found == 1 then
 					deleted[#deleted + 1] = extra
@@ -120,14 +120,16 @@ function _M:onTextMessage(blocks)
 		local extra = blocks[1] == 'start' and '#'..blocks[3] or blocks[1]
 		--print(chat_id, extra)
 		local hash = 'chat:'..chat_id..':extra'
-		local text = red:hget(hash, extra:lower())
+		--print (extra)
+		local text = red:hget(hash, extra)
 		if text == null then text = red:hget(hash, extra) end
 
 		if text == null then return true end -- continue to match plugins
 
 		local file_id = text:match('^###.+###:(.*)')
 		local special_method = text:match('^###file_id!(.*)###') -- photo, voices, video need their method to be sent by file_id
-		local link_preview = text:find('telegra%.ph/') == nil
+		--local link_preview = text:find('telegra%.ph/') == nil
+		local link_preview = false
 		local _, err
 
 		if msg.from.chat.id > 0
@@ -169,12 +171,12 @@ end
 _M.triggers = {
 	onTextMessage = {
 		config.cmd..'(extra)$',
-		config.cmd..'(extra) (#[%w_]*) (.*)$',
-		config.cmd..'(extra) (#[%w_]*)',
+		config.cmd..'(extra) (#[%S_]*) (.*)$',
+		config.cmd..'(extra) (#[%S_]*)',
 		config.cmd..'(extra del) (.+)$',
 		config.cmd..'(extra list)$',
-		'^/(start) (-?%d+)_([%w_]+)$',
-		'^(#[%w_]+)$'
+		'^/(start) (-?%d+)_([%S_]+)$',
+		'^(#[%S_]+)$'
 	}
 }
 
