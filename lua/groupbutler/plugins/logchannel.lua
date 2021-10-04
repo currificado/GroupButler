@@ -33,6 +33,7 @@ local function get_alert_text(self, key)
 		blockban = i18n("Log when a user who has been blocked is banned from the group on join"),
 		nowarn = i18n("Log when an admin removes the warning received by a user"),
 		report = i18n("Log when a user reports a message with the @admin command"),
+		tempban = i18n("Log when a user is temporarily banned"),
 	} Util.setDefaultTableValue(alert_text, i18n("Description not available"))
 
 	return alert_text[key]

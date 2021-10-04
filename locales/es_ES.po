@@ -1190,87 +1190,91 @@ msgstr "Registra cuando un administrador elimina advertencias."
 msgid "Log when a user reports a message with the @admin command"
 msgstr "Registra cuando un usuario reporta un mensaje con el comando @admin."
 
-#: lua/groupbutler/plugins/logchannel.lua:58
+#: lua/groupbutler/plugins/logchannel.lua:36
+msgid "Log when a user is temporarily banned"
+msgstr "Registra cuando un usuario es baneado temporalmente."
+
+#: lua/groupbutler/plugins/logchannel.lua:59
 msgid "Ban"
 msgstr "Baneos"
 
-#: lua/groupbutler/plugins/logchannel.lua:59
+#: lua/groupbutler/plugins/logchannel.lua:60
 msgid "Kick"
 msgstr "Expulsiones"
 
-#: lua/groupbutler/plugins/logchannel.lua:60 lua/groupbutler/utilities.lua:677
+#: lua/groupbutler/plugins/logchannel.lua:61 lua/groupbutler/utilities.lua:677
 msgid "Unban"
 msgstr "Remoción de baneos"
 
-#: lua/groupbutler/plugins/logchannel.lua:61
+#: lua/groupbutler/plugins/logchannel.lua:62
 msgid "Tempban"
 msgstr "Baneos temporales"
 
-#: lua/groupbutler/plugins/logchannel.lua:62
+#: lua/groupbutler/plugins/logchannel.lua:63
 msgid "Report"
 msgstr "Reportes"
 
-#: lua/groupbutler/plugins/logchannel.lua:63
+#: lua/groupbutler/plugins/logchannel.lua:64
 msgid "Warns"
 msgstr "Advertencias"
 
-#: lua/groupbutler/plugins/logchannel.lua:64
+#: lua/groupbutler/plugins/logchannel.lua:65
 msgid "Warns resets"
 msgstr "Eliminación de advertencias"
 
-#: lua/groupbutler/plugins/logchannel.lua:65
+#: lua/groupbutler/plugins/logchannel.lua:66
 msgid "New members"
 msgstr "Nuevos miembros"
 
-#: lua/groupbutler/plugins/logchannel.lua:66
+#: lua/groupbutler/plugins/logchannel.lua:67
 msgid "Media warns"
 msgstr "Advertencias por multimedia"
 
-#: lua/groupbutler/plugins/logchannel.lua:67
+#: lua/groupbutler/plugins/logchannel.lua:68
 msgid "Spam warns"
 msgstr "Advertencias por spam"
 
-#: lua/groupbutler/plugins/logchannel.lua:68
+#: lua/groupbutler/plugins/logchannel.lua:69
 msgid "Flood"
 msgstr "Inundación"
 
-#: lua/groupbutler/plugins/logchannel.lua:69
+#: lua/groupbutler/plugins/logchannel.lua:70
 msgid "New group icon"
 msgstr "Nuevo ícono de grupo"
 
-#: lua/groupbutler/plugins/logchannel.lua:70
+#: lua/groupbutler/plugins/logchannel.lua:71
 msgid "Group icon removed"
 msgstr "Ícono de grupo eliminado"
 
-#: lua/groupbutler/plugins/logchannel.lua:71
+#: lua/groupbutler/plugins/logchannel.lua:72
 msgid "New group title"
 msgstr "Nuevo título del grupo"
 
-#: lua/groupbutler/plugins/logchannel.lua:72
+#: lua/groupbutler/plugins/logchannel.lua:73
 msgid "Pinned messages"
 msgstr "Mensajes anclados"
 
-#: lua/groupbutler/plugins/logchannel.lua:73
+#: lua/groupbutler/plugins/logchannel.lua:74
 msgid "Users blocked and banned"
 msgstr "Los usuarios bloqueados y baneados"
 
-#: lua/groupbutler/plugins/logchannel.lua:74
+#: lua/groupbutler/plugins/logchannel.lua:75
 msgid "Users blocked"
 msgstr "Usuarios bloqueados"
 
-#: lua/groupbutler/plugins/logchannel.lua:75
+#: lua/groupbutler/plugins/logchannel.lua:76
 msgid "Users unblocked"
 msgstr "Usuarios desbloqueados"
 
-#: lua/groupbutler/plugins/logchannel.lua:115
+#: lua/groupbutler/plugins/logchannel.lua:116
 msgid "You are not admin of this group"
 msgstr "No eres administrador de este grupo"
 
-#: lua/groupbutler/plugins/logchannel.lua:121
+#: lua/groupbutler/plugins/logchannel.lua:122
 msgid "User unbanned!"
 msgstr "¡Usuario sin ban!"
 
-#: lua/groupbutler/plugins/logchannel.lua:145
+#: lua/groupbutler/plugins/logchannel.lua:146
 msgid "*Select the events the will be logged in the channel*\n"
 "✅ = will be logged\n"
 "☑️ = won't be logged\n\n"
@@ -1280,7 +1284,7 @@ msgstr "*Seleccione los eventos que se registrarán en el canal*\n"
 "☑️ = no se registrará\n\n"
 "Pulse en una opción para obtener más información"
 
-#: lua/groupbutler/plugins/logchannel.lua:176
+#: lua/groupbutler/plugins/logchannel.lua:177
 msgid "_Too many requests. Retry later_"
 msgstr "_Demasiadas solicitudes. Intente más tarde_"
 
@@ -1288,49 +1292,49 @@ msgstr "_Demasiadas solicitudes. Intente más tarde_"
 msgid "_I need to be admin in the channel_"
 msgstr "_Necesito ser administrador en el canal_"
 
-#: lua/groupbutler/plugins/logchannel.lua:185
+#: lua/groupbutler/plugins/logchannel.lua:186
 msgid "_Already using this channel_"
 msgstr "_Canal ya en uso_"
 
-#: lua/groupbutler/plugins/logchannel.lua:188
+#: lua/groupbutler/plugins/logchannel.lua:189
 msgid "*Log channel added!*"
 msgstr "*¡Canal de log añadido!*"
 
-#: lua/groupbutler/plugins/logchannel.lua:191
+#: lua/groupbutler/plugins/logchannel.lua:192
 #, lua-format
 msgid "<i>%s</i> changed its log channel"
 msgstr "<i>%s</i> cambió su canal de registro"
 
-#: lua/groupbutler/plugins/logchannel.lua:194
+#: lua/groupbutler/plugins/logchannel.lua:195
 #, lua-format
 msgid "Logs of <i>%s</i> will be posted here"
 msgstr "Los logs de <i>%s</i> serán posteados aquí"
 
-#: lua/groupbutler/plugins/logchannel.lua:198
+#: lua/groupbutler/plugins/logchannel.lua:199
 msgid "_Only the channel creator can pair the chat with a channel_"
 msgstr "_Sólo el creador del canal puede asociar el chat con un canal_"
 
-#: lua/groupbutler/plugins/logchannel.lua:202
+#: lua/groupbutler/plugins/logchannel.lua:203
 msgid "_I'm sorry, only private channels are supported for now_"
 msgstr "_Lo siento, sólo los canales privados son compatibles por ahora_"
 
-#: lua/groupbutler/plugins/logchannel.lua:206
+#: lua/groupbutler/plugins/logchannel.lua:207
 msgid "You have to *forward* the message from the channel"
 msgstr "Tienes que *reenviar* el mensaje desde el canal"
 
-#: lua/groupbutler/plugins/logchannel.lua:211
+#: lua/groupbutler/plugins/logchannel.lua:212
 msgid "_This groups is not using a log channel_"
 msgstr "_Este grupo no está usando un canal de registro_"
 
-#: lua/groupbutler/plugins/logchannel.lua:214
+#: lua/groupbutler/plugins/logchannel.lua:215
 msgid "*Log channel removed*"
 msgstr "*Canal de registro eliminado*"
 
-#: lua/groupbutler/plugins/logchannel.lua:219
+#: lua/groupbutler/plugins/logchannel.lua:220
 msgid "_This group has a log channel saved, but I'm not a member there, so I can't post/retrieve its info_"
 msgstr "_Este grupo tiene un canal de registro guardado, pero no soy miembro ahí, así que no puedo postear/ver su información_"
 
-#: lua/groupbutler/plugins/logchannel.lua:224
+#: lua/groupbutler/plugins/logchannel.lua:225
 #, lua-format
 msgid "<b>This group has a log channel</b>\n"
 "Channel: <code>%s</code>"
@@ -2086,7 +2090,7 @@ msgstr "\n"
 #: lua/groupbutler/plugins/warn.lua:198
 #, lua-format
 msgid "Done. All the warnings of this group have been erased by %s"
-msgstr "Acción completada. Todos los warnings de este grupo han sido borrados por %s"
+msgstr "Acción completada. Todos los warnings de este grupo han sido borrados por %s."
 
 #: lua/groupbutler/plugins/warn.lua:200
 msgid "_Action aborted_"
